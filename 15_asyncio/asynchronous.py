@@ -1,18 +1,10 @@
-import time
+import asyncio
 
-async def make_rice():
-    print("Cooking rice...")
-    time.sleep(5)
-    print("Rice Ready")
+async def work():
+    print("Start")
 
-async def make_tea():
-    print("Making tea...")
-    time.sleep(3)
-    print("Tea Ready")
+    await asyncio.sleep(3)
 
-def main():
-    make_rice()
-    make_tea()
+    print("End")
 
-if __name__ == "__main__":
-    main()
+asyncio.run(work())
